@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "hint": "^2.0.0",
+    "webpack": "^5.73.0"
+  }
+}
