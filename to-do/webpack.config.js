@@ -7,6 +7,10 @@ module.exports = {
   devServer: {
     static: './dist',
   },
+  devtool: 'inline-source-map',
+  devServer: {
+    static: './dist',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
@@ -16,6 +20,10 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    publicPath: '/',
+  },
+  optimization: {
+    runtimeChunk: 'single',
   },
   module: {
     rules: [

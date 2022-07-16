@@ -1,3 +1,5 @@
+This is the Microverse Todo list project using  html + css + modular javascript, ES6 syntax, and Webpack.
+
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Project Name
@@ -9,10 +11,10 @@ Use ES6 modules to write modular JavaScript.
 
 
 ## Built With
-
-- HTML
-- CSS
-- Javascript
+- Html
+- css
+- javascript
+- Linter
 
 ## Live Demo (if available)
 
@@ -27,20 +29,7 @@ Use ES6 modules to write modular JavaScript.
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
+You can clone this repo by typing `git clone https://github.com/markotuya0/To-do-list` on your terminal.
 ## Authors
 
 👤👤 **mark otuya**
@@ -53,7 +42,8 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/markotuya0/To-do-list/issues).
+
 
 ## Show your support
 

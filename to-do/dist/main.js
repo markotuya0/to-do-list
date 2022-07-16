@@ -1,1 +1,0 @@
-(()=>{"use strict";(e=>{const t=[{description:"wash the dishes",completed:!1,index:1},{description:"complete To Do List project",completed:!1,index:2}].sort(((e,t)=>e.index-t.index)),i=document.querySelector(".todos");let o="";t.forEach((e=>{o+=` <div class="item">\n        <input type="checkbox" /><span> ${e.description}</span>\n    </div>`})),i.innerHTML=o})()})();
