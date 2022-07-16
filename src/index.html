@@ -3,24 +3,24 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>My Todo list</title>
+    <script src="https://kit.fontawesome.com/a11f8b435e.js" crossorigin="anonymous"></script>
+    <title>Title</title>
 </head>
+
 <body>
-    <div class="container">
-        <h4 class="title">My Today's To do List</h4>
-        <form>
-            <input class="description" type="text" placeholder="Add to your List..." autofocus />
-            <button class="add-btn">
-                <i class="fa-solid fa-arrows-rotate fa-icon"></i>
-            </button>
-        </form>
-        <div class="todos">
+    <div id="list-container">
+        <div class="list-head">
+            <p class="todo">Today's ToDo List</p>
+            <i id="icon" class="fa-solid fa-rotate fa-lg font-awesome-icon"></i>
         </div>
-        <div class="clear">
-            <a class="clear-btn">Clear All</a>
+        <input type="text" class="input" name="addtext" placeholder="Add to your list..." />
+        <div id="list-body"></div>
+        <div class="button" id="clear">
+            <button>Clear all completed</button>
         </div>
     </div>
 </body>
+
 </html>

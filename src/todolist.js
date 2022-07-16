@@ -1,44 +1,75 @@
-export default class Todos {
+class ToDoList {
   constructor() {
-    this.list = localStorage.getItem('todoItems')
-      ? JSON.parse(localStorage.getItem('todoItems'))
-      : [];
+    this.getTasks();
   }
 
-  addItems(todo) {
-    this.list.push(todo);
-    localStorage.setItem('todoItems', JSON.stringify(this.list));
+  updateTasks() {
+    localStorage.setItem('toDoList', JSON.stringify(this.listArray));
   }
 
-  removeItems(todoID) {
-    this.list = this.list.filter((todo) => todo.id !== todoID);
-    this.list.forEach((todo, index) => {
-      todo.index = index + 1;
-    });
-    localStorage.setItem('todoItems', JSON.stringify(this.list));
+  getTasks() {
+    this.listArray = JSON.parse(localStorage.getItem('toDoList')) || [];
   }
 
-  editTodo(todoId, todoDescription) {
-    this.list = this.list.map((todo) => {
-      if (todo.id === todoId) {
-        return { ...todo, description: todoDescription };
+    showTasks = () => JSON.parse(localStorage.getItem('toDoList')) || [];
+
+    setEdit(i) {
+      const task = this.listArray.find(
+        (item) => parseInt(item.index, 10) === parseInt(i, 10),
+      );
+      task.edit = true;
+      this.updateTasks();
+    }
+
+    // add a task
+    addTask(description) {
+      const task = {
+        description,
+        completed: false,
+        index: this.listArray.length + 1,
+        edit: false,
+      };
+      this.listArray = [...this.listArray, task];
+      this.updateTasks();
+    }
+
+    // remove a task
+    clearCompleted() {
+      this.listArray = this.listArray.filter((item) => item.completed !== true);
+      if (this.listArray.length > 0) {
+        this.listArray = this.listArray.map((list, i) => {
+          list.index = i + 1;
+          return list;
+        });
       }
-      return todo;
-    });
-    localStorage.setItem('todoItems', JSON.stringify(this.list));
-  }
+      this.updateTasks();
+    }
 
-  completeTodo(todoId, status) {
-    const selected = this.list.findIndex((element) => element.id === todoId);
-    this.list[selected].completed = status;
-    localStorage.setItem('todoItems', JSON.stringify(this.list));
-  }
+    // remove a task
+    removeTask(index) {
+      this.listArray = this.listArray.filter((item) => item.index !== index);
+      this.listArray = this.listArray.map((list, i) => {
+        list.index = i + 1;
+        return list;
+      });
+      this.updateTasks();
+    }
 
-  clearCompletedTodos() {
-    this.list = this.list.filter((todo) => !todo.completed);
-    this.list.forEach((todo, index) => {
-      todo.index = index + 1;
-    });
-    localStorage.setItem('todoItems', JSON.stringify(this.list));
-  }
+    // Edit a task
+    editTask(index, description) {
+      this.listArray[index - 1].description = description;
+      this.listArray[index - 1].edit = false;
+      this.updateTasks();
+    }
+
+    changeComplete(i) {
+      const status = this.listArray[i - 1].completed;
+      this.listArray[i - 1] = {
+        ...this.listArray[i - 1],
+        completed: !status,
+      };
+      this.updateTasks();
+    }
 }
+
+export default ToDoList;

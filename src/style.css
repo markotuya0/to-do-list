@@ -1,79 +1,92 @@
-* {
-  font-family: sans-serif;
+/* CSS */
+
+html {
+  box-sizing: border-box;
 }
 
-body {
+#list-container {
+  flex-direction: column;
   align-items: center;
+  margin: 0 auto;
+  border: 1px solid rgba(220, 220, 220, 1);
+  width: 500px;
+  max-width: 500px;
+  background-color: white;
+  box-shadow: 0 0 30px rgba(150, 150, 150, 0.25);
 }
 
-.container {
-  max-width: 40%;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
-  border: 1px solid whitesmoke;
-  margin: 50px auto;
-}
-
-.title {
-  padding-left: 10px;
-}
-
-form {
+.list-head {
   display: flex;
-  padding-right: 0;
-  position: relative;
-  border-top: 0.6px solid rgb(216, 216, 216);
-  border-right: none;
-  border-bottom: 0.6px solid rgb(216, 216, 216);
-  border-left: none;
-}
-
-.items {
-  padding: 3%;
-  border-bottom: 0.6px solid rgb(216, 216, 216);
-  display: flex;
-  flex-direction: row;
+  margin: 0;
   justify-content: space-between;
+  align-items: center;
+  border: 2px solid rgba(220, 220, 220, 1);
+  padding: 0 1rem;
 }
 
-.todoInput {
-  width: 90%;
-  height: 50px;
+#icon {
+  color: gray;
+}
+
+.input {
+  border: none;
+  font-size: 1rem;
+  padding: 1rem 1rem;
   font-style: italic;
-  border-top: 0.6px solid lightgray;
-  border-right: none;
-  border-left: none;
 }
 
-.description {
-  width: 100%;
-  height: 50px;
-  border-bottom: 0.6px solid lightgray;
-  border-top: none;
-  border-right: none;
-  border-left: none;
+.list {
+  display: flex;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(220, 220, 220, 1);
+  border-top: 1px solid rgba(220, 220, 220, 1);
+  padding: 1rem 1rem;
+}
+
+.list p {
+  margin-left: 1rem;
+}
+
+i {
+  margin-left: auto;
+  color: gray;
+}
+
+.hide {
+  display: none;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(220, 220, 220, 1);
+  background-color: rgb(238, 238, 238);
+}
+
+button {
+  border: none;
+  color: gray;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .edit {
-  width: 80%;
-  height: 50px;
+  background-color: rgba(255, 235, 205);
+}
+
+.edit input {
   border: none;
+  background-color: rgba(255, 235, 205);
+  font-size: 1rem;
+  margin-left: 1rem;
 }
 
-h3 {
-  padding-left: 10px;
+input:focus {
+  outline: none;
 }
 
-.remove-btn,
-.addButton {
-  height: 55px;
-  width: 55px;
-}
-
-.clear {
-  display: flex;
-  justify-content: center;
-  padding: 3%;
-  height: 40px;
-  padding-top: 10px;
-  background-color: lightgrey;
+.strike {
+  text-decoration: line-through;
 }
