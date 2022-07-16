@@ -1,20 +1,18 @@
 import './style.css';
+import myList from './app.js';
+import ThingsTodo from './todolist.js';
 
-const todosList = [
-  { description: 'wash the dishes', completed: false, index: 1 },
-  { description: 'complete To Do List project', completed: false, index: 2 },
-];
+const todoArray = new ThingsTodo();
+myList(todoArray);
 
-const render = (list) => {
-  const sortedTodos = list.sort((a, b) => a.index - b.index);
-  const listContainer = document.querySelector('.todos');
-  let listHtml = '';
-  sortedTodos.forEach((todo) => {
-    listHtml += ` <div class="item">
-        <input type="checkbox" /><span> ${todo.description}</span>
-    </div>`;
-  });
-  listContainer.innerHTML = listHtml;
-};
-
-render(todosList);
+const addTodoBtn = document.querySelector('.addButton');
+addTodoBtn.addEventListener('click', () => {
+  const description = document.querySelector('.todoInput').value.trim();
+  const completed = false;
+  const index = todoArray.list.length + 1;
+  const newTodo = { description, completed, index };
+  if (description) {
+    todoArray.addList(newTodo);
+    myList(todoArray);
+  }
+});
