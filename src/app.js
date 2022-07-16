@@ -33,7 +33,6 @@ const myList = (mytodoList) => {
       todoArray.editList(Number(e.target.id), e.target.value);
     });
   });
-
 };
 
 export default myList;
