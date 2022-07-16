@@ -15,18 +15,15 @@ const myList = (mytodoList) => {
   });
   itemsContainer.innerHTML = itemsHtml;
 
-  // delete
   const removeBtns = document.querySelectorAll('.delButton');
   removeBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       const element = btn.parentNode;
       element.remove();
       mytodoList.deleteList(Number(e.target.parentNode.id));
-      // element.remove();
     });
   });
 
-  // edit
   const todosContent = document.querySelectorAll('.itemTodo');
   todosContent.forEach((todoArray) => {
     todoArray.addEventListener('change', (e) => {
