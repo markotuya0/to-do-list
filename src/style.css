@@ -51,21 +51,6 @@ i {
   margin-left: auto;
   color: gray;
 }
-
-.hide {
-  display: none;
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid rgba(220, 220, 220, 1);
-  background-color: rgb(238, 238, 238);
-}
-
-button {
   border: none;
   color: gray;
   font-size: 1rem;
