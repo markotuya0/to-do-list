@@ -29,7 +29,7 @@ Use ES6 modules to write modular JavaScript.
 
 To get a local copy up and running follow these simple example steps.
 
-You can clone this repo by typing `git clone https://github.com/markotuya0/To-do-list` on your terminal.
+You can clone this repo by typing `git clone https://github.com/markotuya0/to-do-list.git` on your terminal.
 ## Authors
 
 👤👤 **mark otuya**
