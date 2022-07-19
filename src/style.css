@@ -51,11 +51,7 @@ i {
   margin-left: auto;
   color: gray;
 }
-  border: none;
-  color: gray;
-  font-size: 1rem;
-  cursor: pointer;
-}
+
 
 .edit {
   background-color: rgba(255, 235, 205);
