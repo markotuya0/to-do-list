@@ -18,7 +18,7 @@ Use ES6 modules to write modular JavaScript.
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://markotuya0.github.io/to-do-list/)
+[Live Demo Link](https://mark-todolist.netlify.app/)
 
 
 ## Getting Started
